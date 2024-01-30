@@ -20,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/user-list',[UserController::class,'user_list'])->name('User_List');
-Route::get('/user-list/download',[UserController::class,'user_list_download'])->name('User_List_Download');
+Route::get('/user-list/download_pdf',[UserController::class,'user_list_download'])->name('User_List_Download_Pdf');
+Route::get('/user-list/download_excel',[UserController::class,'user_list_download_excel'])->name('User_List_Download_Excel');
 
 Auth::routes();
 

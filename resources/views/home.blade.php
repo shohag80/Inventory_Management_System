@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __("You are logged in! You can see") }}<a href="{{route('User_List')}}"> all Users.</a>
                 </div>
             </div>
         </div>

@@ -13,7 +13,8 @@
 
     <div class="container mt-4">
         <h3 style="text-align: center;"><u>Users Data</u></h3>
-        <a href="{{route('User_List_Download')}}" class="btn btn-sm btn-outline-primary float-end">Download</a>
+        <a href="{{route('User_List_Download_Pdf')}}" class="btn btn-sm btn-outline-primary float-end mx-2">Download PDF</a>
+        <a href="{{route('User_List_Download_Excel')}}" class="btn btn-sm btn-outline-primary float-end">Download EXCEL</a>
         <table class="table table-hover">
             <thead>
                 <tr>

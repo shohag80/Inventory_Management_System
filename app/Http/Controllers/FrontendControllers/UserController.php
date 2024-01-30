@@ -24,4 +24,9 @@ class UserController extends Controller
         $pdf = Pdf::loadView('Frontend.Pages.Users.Users_list', $data);
         return $pdf->download('User_list.pdf');
     }
+
+    public function user_list_download_excel()
+    {
+        dd('Hello');
+    }
 }
