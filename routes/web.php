@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Backend\UserController as BackendUserController;
 use App\Http\Controllers\FrontendControllers\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[UserController::class,'welcome'])->name('Home');
+
+Route::get('/logout',[BackendUserController::class,'logout'])->name('Logout');
 
 Route::get('/user-list',[UserController::class,'user_list'])->name('User_List');
 Route::get('/user-list/download_pdf',[UserController::class,'user_list_download'])->name('User_List_Download_Pdf');
@@ -25,5 +27,5 @@ Route::get('/user-list/download_excel',[UserController::class,'user_list_downloa
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('Deshboard');
 
